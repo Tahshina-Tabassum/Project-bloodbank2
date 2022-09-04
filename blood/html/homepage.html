@@ -6,28 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" type='text/css' href="../css/homepage.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <div class="scroll-up-btn">
-        <i class="fas fa-angle-up"></i>
-    </div>
+    <nav class="navbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
 
-    <nav class="navbar" id="navbar">
-        <div class="max-width">
-            <div class="logo"><a href="#"><img src="../image/RokterEmoji_2.png " height="120px"
-                        width="auto"><br>Blood <span>bank</a></div>
+                    <div class="logo"><a href="#"><img src="../image/RokterEmoji_2.png " height="120px"
+                                width="auto"><span>Blood</span> Bank</a></div>
+                </div>
+                <div class="col-6">
 
-            <ul class="menu">
-                <li><a href="#home" class="menu-btn">Home</a></li>
-                <li><a href="#about" class="menu-btn">About</a></li>
-                <li><a href="#log-in" class="menu-btn">log in</a></li>
-            </ul>
+                    <ul class="menu">
+                        <li><a href="#home" class="menu-btn">Home</a></li>
+                        <li><a href="#about" class="menu-btn">About</a></li>
+                        <li><a href="#log-in" class="menu-btn">log in</a></li>
+                    </ul>
 
+                </div>
+            </div>
         </div>
 
     </nav>
+
+
     <section class="home" id="home">
         <div class="slider">
             <div class="load">
@@ -35,7 +50,10 @@
 
             <div class="content">
                 <div class="principal">
-                    <h1>blood related quote</h1>
+                    <h1>"Our <span>blood</span> is the <span>same,</span> we just use it <span>differently.</span>"
+                        <br>
+                        <h4>~ Patrick deWitt</h4>
+                    </h1>
                 </div>
 
 
@@ -53,7 +71,7 @@
                     <img src="../image/unsplash.jpg" alt="">
                 </div>
                 <div class="column right">
-                    <div class="text">this is a blood bank <span>website</span>
+                    <div class="text">About Our Blood Bank <span>Website</span>
 
                     </div>
                     <p>Blood is a life saving resource that lies within all of us. The need for blood donations is
@@ -77,10 +95,12 @@
         <section class="log-in" id="log-in">
             <div class="hero">
                 <div class="form-box">
-                    <div class="button-box">
-                        <div id="btn"></div>
-                        <button type="button" class="toggle-btn" onclick="login()">Log in</button>
-                        <button type="button" class="toggle-btn" onclick="resister()">Resister</button>
+                    <div class="button-center">
+                        <div class="button-box">
+                            <div id="btn"></div>
+                            <button type="button" class="toggle-btn" onclick="login()">Log in</button>
+                            <button type="button" class="toggle-btn" onclick="resister()">Register</button>
+                        </div>
                     </div>
                     <div class="social-icons">
                         <img src="../image/fb.png">
@@ -91,21 +111,23 @@
                     <form class="input-group" id="login" action="2ndpage.html">
                         <input type="text" class="input-field" placeholder="User Id" required>
                         <input type="text" class="input-field" placeholder="Enter Password" required>
-                        <input type="checkbox" class="check-box">Remember Password
+                        <input type="checkbox" class="check-box"><br>Remember Password
 
-
-                        <a href="2ndpage.html"><button onclick="submit" class="submit-btn">log in</button></a>
+                        <div class="button-center">
+                        <a href="2ndpage.html"><button onclick="submit" class="submit-btn">Log in</button></a>
                         <!-- <a href="2ndpage.html" class="loginbutton ">Log In</a> -->
-
+                    </div>
                     </form>
 
                     <form class="input-group" id="resister">
                         <input type="text" class="input-field" placeholder="User Name" required>
                         <input type="email" class="input-field" placeholder="E-mail Id" required>
                         <input type="checkbox" class="check-box"><span>i agreed to the terms and conditions</span>
+                        <div class="button-center">
                         <a href="2nd page.html">
-                            <button type="submit" class="submit-btn">resister</button>
+                            <button type="submit" class="submit-btn">Register</button>
                         </a>
+                    </div>
                     </form>
 
                 </div>
@@ -114,6 +136,13 @@
 
         </section>
         <script src="../js/homepage.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+            crossorigin="anonymous"></script>
+
 </body>
 
 </html>
