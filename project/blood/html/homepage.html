@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/homepage.css">
+</head>
+
+<body>
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="#"><img src="../image/RokterEmoji_2.png " height="120px"
+                        width="auto"><br>Blood <span>bank</a></div>
+
+            <ul class="menu">
+                <li><a href="#home" class="menu-btn">Home</a></li>
+                <li><a href="#about" class="menu-btn">About</a></li>
+                <li><a href="#log-in" class="menu-btn">log in</a></li>
+            </ul>
+
+        </div>
+
+    </nav>
+    <section class="home" id="home">
+        <div class="slider">
+            <div class="load">
+            </div>
+
+            <div class="content">
+                <div class="principal">
+                    <h1>blood related quote</h1>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </section>
+    <!-- about section start -->
+    <section class="about" id="about">
+        <div class="max-width">
+            <h2 class="title">About </h2>
+            <div class="about-content">
+                <div class="column left">
+                    <img src="../image/unsplash.jpg" alt="">
+                </div>
+                <div class="column right">
+                    <div class="text">this is a blood bank <span>website</span>
+
+                    </div>
+                    <p>Blood is a life saving resource that lies within all of us. The need for blood donations is
+                        constant and it is our responsibility to ensure that there is a healthy and reliable supply in
+                        the Cayman Islands through empowerment and education.
+
+                        We believe in empowering our local community by educating them about the importance of blood
+                        donations and the simplicity around the process of donating.
+
+                        Our aim is to realize the ideal of a self-sustained community with access to blood for the
+                        purposes of changing lives, without having to import resources.
+
+                        You have the power to save someone’s life.
+                        Write to 2-2 Final Project Group
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- log in section start -->
+        <section class="log-in" id="log-in">
+            <div class="hero">
+                <div class="form-box">
+                    <div class="button-box">
+                        <div id="btn"></div>
+                        <button type="button" class="toggle-btn" onclick="login()">Log in</button>
+                        <button type="button" class="toggle-btn" onclick="resister()">Resister</button>
+                    </div>
+                    <div class="social-icons">
+                        <img src="../image/fb.png">
+                        <img src="../image/tweet.png">
+                        <img src="../image/google2.png">
+
+                    </div>
+                    <form class="input-group" id="login" action="http://localhost/project/blood/html/2ndpage.php">
+                        <input type="text" id="userid" class="input-field" placeholder="User Id" required>
+                        <input type="text" id="pass" class="input-field" placeholder="Enter Password" required>
+                        <input type="checkbox" class="check-box">Remember Password
+
+
+                        <a href="http://localhost/project/blood/html/2ndpage.php"><button onclick="submit" class="submit-btn">log in</button></a>
+                        <!-- <a href="2ndpage.html" class="loginbutton ">Log In</a> -->
+
+                    </form>
+
+                    <form class="input-group" id="resister" action="http://localhost/project/blood/php/index.php">
+                        <input type="text" class="input-field" placeholder="User Name" required>
+                        <input type="email" class="input-field" placeholder="E-mail Id" required>
+                        <input type="checkbox" class="check-box"><span>i agreed to the terms and conditions</span>
+                        
+                            <button type="submit" class="submit-btn">resister</button>
+                        </a>
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+        <script src="../js/homepage.js"></script>
+</body>
+
+</html>
