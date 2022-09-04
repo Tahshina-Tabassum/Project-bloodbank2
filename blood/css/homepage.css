@@ -77,7 +77,7 @@ padding: 0px;
 }
 
 .navbar .logo a{
-    color:burlywood;
+    color:#211103;
     font-size: 25px;
     font-weight: bolder;
     text-decoration: none;
@@ -101,8 +101,8 @@ padding: 0px;
 
 }
 .navbar .menu li a{
-    background-color: #751010d1;
-    color:burlywood;
+    background-color:#7B0D1E;
+    color:#F8E5EE;
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
@@ -114,7 +114,8 @@ padding: 0px;
 }
 
 .navbar .menu li a:hover{
-color:rgb(235, 206, 23);
+color:#3d1308;
+background: transparent;
 }
 
 .load{
@@ -153,8 +154,13 @@ color:rgb(235, 206, 23);
     margin-bottom: 20px;
 }
 .principal h1 span{
-    color: crimson;
+    color:#7B0D1E;
 }
+.principal h4{
+    color:#3D1308;
+
+}
+
 @keyframes slide{
     0%{
         background-image: url('../image/patient.jpg');
@@ -204,14 +210,14 @@ color:rgb(235, 206, 23);
     font-family: 'PT Serif', serif;
     background-size: cover; 
     z-index:-1;
-    background-color: #ffad06;
+    background-color:#F8E5EE;
  }
 
 
 .about .title{
     position: relative;
     text-align: center;
-    color:black;
+    color:#9F2042;
     font-size: 40px;
     font-weight:500;
     margin-bottom: 60px;
@@ -237,14 +243,14 @@ transform:translateX(-50%) ;
     bottom: -13px;
      left:50%; 
      font-size: 20px;
-     color:rgb(94, 3, 3);
+     color:black;
      padding: 4px;
-    background-color:blanchedalmond;
+    background-color:#F8E5EE;
     transform:translateX(-50%) ;
     }
 
 .about .about-content .left img{
-    height: 400px;
+    height: 500px;
     width: 700px;
     object-fit: cover;
     border-radius: 6px;
@@ -275,12 +281,13 @@ transform:translateX(-50%) ;
     margin-left: 300px;
 }
 .about .about-content .right .text span{
-    color:rgb(94, 3, 3);
+    color:#9F2042;
 }
 .about .about-content .right p{
     text-align: justify;
     font-size: large;
     margin-left: 300px;
+    
 }
 
 .about .about-content .column{
@@ -291,7 +298,7 @@ transform:translateX(-50%) ;
 .hero{
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../image/blood\ 3.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../image/patient.jpg);
     background-position: center;
     background-size: cover;
     position:absolute;
@@ -301,7 +308,7 @@ transform:translateX(-50%) ;
     height: 480px;
     position:relative;
     margin: 6% auto;
-    background:#fff;
+    background:#F8E5EE;
     padding: 5px;
     overflow: hidden;
 }
@@ -332,7 +339,7 @@ transform:translateX(-50%) ;
     position: absolute;
     width: 110px;
     height: 100%;
-    background:linear-gradient(to right,#ff105f,#ffad06);
+    background:linear-gradient(to right,#7B0D1E,#9F2042,#F8E5EE);
     border-radius: 30px;
     transition: .5s;
     text-align: center;
@@ -386,7 +393,7 @@ transform:translateX(-50%) ;
     cursor: pointer;
     display: block;
     margin: auto;
-    background: linear-gradient(to right,#ff105f,#ffad06);
+    background: linear-gradient(to right,#7B0D1E,#9F2042,#F8E5EE);
     border:0;
     border-radius: 30px;
     outline: none;
