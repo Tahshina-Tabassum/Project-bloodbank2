@@ -23,25 +23,10 @@ if (mysqli_num_rows($result)>0) {
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/2nd page.css">
 </head>
 <body>
     
-    <div class="content">
-    <h1>2nd page</h1>
-    <p>
-        blah blah blah
-    </p>
-    <div class="button">
-        
-       <div><button type="button" class="btn1">urgent </button></div>
-        
-        <div><button type="button" class="btn2">need blood</button></div>
-       
-        <div><button type="button" class="btn3">donate blood </button></div>
-
-    </div>
 </body>
 </html>

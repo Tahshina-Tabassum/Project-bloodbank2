@@ -24,6 +24,7 @@ if($row!=0)echo "This Username is not available . <br>";
 else {
 $sql="INSERT INTO `blood_group`.`blood_donation`(`username`, `password`, `name`, `registration_number`, `roll_number`, `department`, `hall_name`, `gender`, `phone_number`, `email`, `last_donate`,`blood_group`, `diseases`)
  VALUES ('$username','$password','$name','$registration_number','$roll_number','$department','$hall','$gender','$phone_number','$email','$date','$blood_group','$diseases');";
+ mysqli_query($con,$sql);
 echo "Successfully Inserted";
 }
 $con->close();
@@ -54,7 +55,7 @@ $con->close();
         <input type="text" name="gender" id="gender" placeholder="Enter your gender">
         <input type="text" name="phone_number" id="phone_number" placeholder="Enter your phone number">
         <input type="email" name="email" id="email" placeholder="Enter your email">
-        <input type="date" name="date" id="date" placeholder="Last date of blood donation">
+        <input name="date" id="date" placeholder="Last donate date" onfocus="(this.type='date')">
         <label for="Blood Group">Choose your Blood Group:</label>
         <select id="blood_group" name="blood_group">
         <option value="A+">A+</option>
