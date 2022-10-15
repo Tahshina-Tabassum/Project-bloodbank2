@@ -68,7 +68,7 @@ html{
 }
 .navbar .sticky{
     padding-top: 15px;
-    background:brown;  
+    /* background:brown;   */
 }
 
 
@@ -135,8 +135,7 @@ background: transparent;
     color:black;
     width: 100%;
     height: 100vh;
-    background-color:;
-
+    
 }
 .principal{
     left: 50%;
@@ -175,31 +174,31 @@ background: transparent;
         opacity:50%;
     }
     40%{
-        background-image: url('../image/blood5.jpg');
+        background-image: url('../image/blood1.jpg');
         opacity:100%;
     }
     40.01%{
-        background-image: url('../image/blood5.png');
+        background-image: url('../image/blood1.jpg');
         opacity:50%;
     }
     60%{
-        background-image: url('../image/blood6.png');
+        background-image: url('../image/blood2.jpg');
         opacity:100%;
     }
     60.01%{
-        background-image: url('../image/blood6.png');
+        background-image: url('../image/blood2.jpg');
         opacity:50%;
     }
     80%{
-        background-image: url('../image/blood1.png');
+        background-image: url('../image/blood3.jpg');
         opacity:100%;
     }
     80.01%{
-        background-image: url('../image/blood1.png');
+        background-image: url('../image/blood3.jpg');
         opacity:50%;
     }
     100%{
-        background-image: url('../image/blood\ 4.jpg');
+        background-image: url('../image/blood4.jpg');
         opacity:100%;
     }
    
@@ -238,7 +237,7 @@ transform:translateX(-50%) ;
 
 }
 .about .title::after{
-    content:"this website";
+    content:"we provide";
     position:absolute;
     bottom: -13px;
      left:50%; 
@@ -293,12 +292,114 @@ transform:translateX(-50%) ;
 .about .about-content .column{
     width: 50%;
 }
+/* service section starting */
+/* .service.title h2{
+    position: relative;
+    text-align: center;
+    color:#9F2042;
+    font-size: 40px;
+    font-weight:500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+
+.service .title::before{
+content:"";
+position:absolute;
+bottom: 0px;
+ left:50%; 
+width: 200px;
+height: 3px;
+background:black;
+transform:translateX(-50%) ;
+
+
+
+}
+.service .title::after{
+    content:"we provide";
+    position:absolute;
+    bottom: -13px;
+     left:50%; 
+     font-size: 20px;
+     color:black;
+     padding: 4px;
+    background-color:#F8E5EE;
+    transform:translateX(-50%) ;
+    } */
+
+.wrapper{
+    width: 80%;
+    margin: 150px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.content{
+
+    padding:10% 0 ;
+}
+.content h1{
+    margin: 14px 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    color: white;
+
+}
+.content p{
+    width: 85%;
+    margin: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    color: white;
+
+}
+.content a{
+    text-decoration: none;
+    background:#A63446;
+    color: #f1f1f1;
+    padding: 10px 30px;
+    display: inline-block;
+    margin-top: 20px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+}
+.icon{
+    width: 64px;
+    height: 64px;
+    background: #f1f1f1;
+    margin: auto;
+    border-radius: 50%;
+
+}
+
+
+.single-box{
+    width: 400px;
+    height: 400px;
+    margin: 0 15px;
+    transition: .7s;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../image/RokterEmoji_2.png);
+    text-align: center;
+    color:white;
+    background-size: cover;
+    background-position: center center;
+
+}
+.single-box:hover{
+    transform: scale(1.2);
+    z-index:2 ;
+}
+
 
 /* log in form section start */
 .hero{
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../image/patient.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../image/blood-sample-by-stethoscope.jpg);
     background-position: center;
     background-size: cover;
     position:absolute;
