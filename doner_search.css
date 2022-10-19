@@ -1,0 +1,48 @@
+body{
+    background-color:black;
+   align-content: center;
+}
+.form{
+    border-radius: 5px;
+    background-color: bisque;
+    border-color: brown;
+    border-width:2px;
+    height: 50px;
+    width: 700px;
+    margin-top: 270px;
+    margin-bottom: 50px;
+}
+.form_box h3{
+ text-align: center;
+ margin-top: 25px;
+ color:crimson;
+}
+.blood{
+    color: aliceblue;
+   
+    text-align: center;
+    background-color:crimson;
+    height: 40px;
+    width: 700px;
+    margin-bottom:30px;
+    border-radius: 5px;
+}
+.bl{
+    align-items: center;
+    
+}
+   
+.btn{
+    padding: 10px;
+    border-radius: 5px;
+    border-color: brown;
+    border-width: 2px;
+    background-color:bisque;
+    margin-top: 50px;
+    width: 700px;
+    margin-right: 140px;
+}
+.btn:hover{
+    transition: 0.4s;
+    transform: ;
+}
