@@ -110,8 +110,8 @@ a:hover{
     background-color:bisque;
 }
 .row{
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 6.85%;
+    margin-right: 6.85%;
 }
 .btn{
     color: white;
@@ -121,4 +121,57 @@ a:hover{
     text-decoration: none;
     margin-left: 850px;
    
+}
+
+@media (max-width:1000px){
+    html{
+        font-size: 90%;
+    }
+    .btn{
+        padding: .5px;
+        margin-left: 0px;
+        font-size: 90%;   
+    }
+    .row{
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+    .logo{
+        font-size: 25px;
+        letter-spacing: 4px;
+    }
+    nav{
+
+        padding-top: 0px;
+        margin-left: 6%;
+        margin-right: 6%;
+        padding-left: 8%;
+        padding-right: 8%;;
+    }
+
+    @media (max-width:400px){
+        html{
+            font-size: 75%;
+        }
+        .btn{
+            padding: .5px;
+            margin-left: 0px;
+            font-size: 90%;   
+        }
+        .row{
+            margin-left: 3%;
+            margin-right: 3%;
+        }
+        .logo{
+            font-size: 11px;
+            letter-spacing: 8px;
+        }
+        nav{
+    
+            padding-top: 0px;
+            margin-left: 3%;
+            margin-right: 3%;
+            padding-left: 8%;
+            padding-right: 8%;;
+        }
 }
