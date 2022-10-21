@@ -44,8 +44,7 @@ session_start();
                     <img src="<?php echo $_SESSION["image"];?>" class="rounded-circle" >
                     <input type="file" name="file" id="file" value="<?php echo $_SESSION["image"];?>">
                     <div class="mt-3">
-                        <h3> <input type="text" name="name" value="<?php echo $_SESSION["name"]?>"></h3>
-                        <h4 class="search-text"><a href="donar_search.php">ðŸ”ŽClick for search</a></h4>
+                        <h3> <?php echo $_SESSION["name"];?></h3>
                         
                     </div>
                 </div>
@@ -58,7 +57,7 @@ session_start();
                                     <h4>Full Name</h4>
                                 </div>
                                 <div class="col-md-9 text-secondary">
-                                <input type="text" name="name" value="<?php echo $_SESSION["name"]?>">
+                                <input type="text" name="name" value="<?php echo $_SESSION["name"];?>">
                                    
                                 </div>
                             </div>
@@ -68,7 +67,7 @@ session_start();
                                     <h4>Department Name</h4>
                                 </div>
                                 <div class="col-md-9 text-secondary">
-                                <input type="text" name="department" value="<?php echo $_SESSION["department_name"]?>">
+                                <input type="text" name="department" value="<?php echo $_SESSION["department_name"];?>">
                                 </div>
                             </div>
                             <hr>
@@ -77,7 +76,7 @@ session_start();
                                     <h4>E-mail</h4>
                                 </div>
                                 <div class="col-md-9 text-secondary">
-                                <input type="text" name="email" value="<?php echo $_SESSION["email"]?>">
+                                <input type="text" name="email" value="<?php echo $_SESSION["email"];?>">
                                 </div>
                             </div>
                             <hr>
@@ -86,7 +85,18 @@ session_start();
                                     <h4>Blood group</h4>
                                 </div>
                                 <div class="col-md-9 text-secondary">
-                                <input type="text" name="blood_group" value=" <?php echo $_SESSION["blood_group"]?>">
+                                    <select name="blood_group" placeholder="none">
+        <option value="<?php echo $_SESSION["blood_group"];?>"> <?php echo $_SESSION["blood_group"];?></option>
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B-">B-</option>
+        <option value="O+">O+</option>
+        <option value="O-">O-</option>
+        <option value="AB+">AB+</option>
+        <option value="AB-">AB-</option>
+                        </select>
+                               
 </div>
                             </div>
                             <hr>
@@ -95,7 +105,7 @@ session_start();
                                     <h4>Phone number</h4>
                                 </div>
                                 <div class="col-md-9 text-secondary">
-                                <input type="text" name="phone_number" value=" <?php echo $_SESSION["phone_number"]?>">
+                                <input type="text" name="phone_number" value=" <?php echo $_SESSION["phone_number"];?>">
                                 </div>
                             </div>
                             <hr>
@@ -127,14 +137,14 @@ session_start();
                     </div>
                 </div>
             </div>
-            <input type="update" value="Update" name="update" class="btn">
+            <button>update</button>
 </form>
         </div>
     </div>
 </body>
 </html>
 <?php
-if(isset($_POST['update'])){
+if($_SERVER["REQUEST_METHOD"] == "POST"){
 $server="bloodios.com";
 $username="bloodios";
 $password="SXd).4hbT9kJ16";  
@@ -153,8 +163,9 @@ if(!$con)echo $con->error();
      $destinationfile='upload/'.$filename;
      move_uploaded_file($filetmp,$destinationfile);
  }
-//$username=$_POST['username'];
-//$password=$_POST['password'];
+$username=$_SESSION["username"];
+//if(!isset($_SESSION["username"]))echo '<script> alert("Username ok ");</script//>';
+$password=$_SESSION["password"];
 $name=$_POST['name'];
 $_SESSION['name']=$name;
 //$registration_number=$_POST['registration_number'];
@@ -171,17 +182,35 @@ $date=$_POST['last_donate'];
 $_SESSION['last_donate']=$date;
 $blood_group=$_POST['blood_group'];
 $_SESSION['blood_group']=$blood_group;
+if($filename!="")
+$_SESSION["image"]=$destinationfile;
 //$diseases=$_POST['diseases'];
 
-
-
-$sql="UPDATE  `donar` set `name`='$name',`department_name`='$department',`phone_number`='$phone_number',`last_donate`='$date',`email`='$email',`image`='$destinationfile';";
+$sql="SELECT * FROM `donar` WHERE `username`='" . $_SESSION["username"] . "';";
+$result=mysqli_query($con,$sql);
+$row=mysqli_num_rows($result);
+if($row==0)echo '<script> alert("This is username is not available ");</script>';
+if($filename!=""){
+$sql="UPDATE  `donar` set `name`='$name',`department_name`='$department',`phone_number`='$phone_number',`last_donate`='$date',`email`='$email',`image`='$destinationfile',`blood_group`='$blood_group' WHERE username='$username'";
  $res=mysqli_query($con,$sql);
  if($res){
-echo '<script> alert("Sucessfully updated");</script>';
+//echo '<script> alert("Sucessfully updated");</script>';
 echo '<script> location.href= "profile.php";</script>';
 }
 else echo $con->error;
+}
+else 
+{
+    $sql="UPDATE  `donar` set `name`='$name',`department_name`='$department',`phone_number`='$phone_number',`last_donate`='$date',`email`='$email',`blood_group`='$blood_group' WHERE username='$username'";
+ $res=mysqli_query($con,$sql);
+ //echo '<script> alert("This is username is not available ");</script>';
+ if($res){
+//echo '<script> alert("Sucessfully updated");</script>';
+echo '<script> location.href= "profile.php";</script>';
+}
+else echo $con->error;
+}
+ 
 
 }
 
