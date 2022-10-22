@@ -1,0 +1,236 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'Josefin Sans', sans-serif;
+	box-sizing: border-box;
+
+}
+nav{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 0px;
+	padding-left: 8%;
+	padding-right: 8%;
+    background: black;
+}
+.logo{
+	color: white;
+	font-size: 35px;
+	letter-spacing: 2px;
+	cursor: pointer;
+}
+span{
+	color: #f9004d;
+}
+nav ul li{
+	list-style-type: none;
+	display: inline-block;
+	padding: 10px  25px;
+}
+nav ul li a{
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+nav ul li a:hover{
+    text-decoration: none;
+	color: #f9004d;
+	transition: .4s;
+    
+}
+.container1{
+    background: #191919;
+    color: white;
+    height: 90vh;
+    
+}
+.col1{
+	padding-left: 16vw;
+}
+#tform{
+    text-align: center;
+    padding: 40px 0px;
+}
+.first-last{
+    width: 20vw;
+    padding-left: 20px; ;
+}
+#flname{
+    padding-top:8px ;
+}
+pre{
+    color: white;
+}
+.email{
+    width: 40.5vw;
+}
+.Password{
+    width: 40.5vw;
+}
+.username{
+    width: 40.5vw;
+}
+.textarea1{
+    width: 40.5vw;
+    height: 150px;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    resize: none;
+}
+.btn{
+	background-color:#f9004d;
+	color: white;
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 10px 25px;
+	border-radius: 30px;
+	transition: transform .4s; 
+}
+.btn:hover{
+	transform: scale(1.2);
+}
+.col2-padding{
+    padding:30vh 0px 45px 45px ;
+}
+.col2-writing{
+    padding-left: 45px;
+    line-height: 4vh;
+	
+}
+.sample-page{
+    text-decoration: none;
+    color: white;
+	border-left: 5px solid #f9004d;
+}
+.sample-page:hover{
+    text-decoration: none;
+    transition-duration: 0.4s;
+    color: #f9004d;
+}
+.map{
+    color: white;
+    background: black;
+    text-align: center;
+ 
+}
+#map1{
+    padding: 20px;;
+}
+#about-project{
+    background-color: #191919;
+    height: 66vh;
+    width: 100%;
+}
+#about-project h3{
+    padding: 100px 250px 0px 250px;
+    font-size: 35px;
+	color: white;
+}
+#project-details{
+    padding: 0px 250px;
+}
+#name-email{
+    width: 29vw;
+    padding-left: 20px; ;
+}
+textarea{
+    width: 60vw;
+    height: 150px;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    resize: none;
+}
+#connect{
+    padding-right: 74px;
+}
+footer{
+	position: relative;
+	width: 100%;
+	height: 400px;
+	background: black;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+footer p:nth-child(1){
+	font-size: 30px;
+	color: white;
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+footer p:nth-child(2){
+	color: white;
+	font-size: 17px;
+	width: 500px;
+	text-align: center;
+	line-height: 26px;
+}
+.social{
+	display: flex;
+}
+.social a{
+	width: 45px;
+	height: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background:  #f9004d;
+	border-radius: 50%;
+	margin: 22px 10px;
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+}
+.social a:hover{
+	transform: scale(1.3);
+	transition: .3s;
+}
+.end{
+	position: absolute;
+	color:#f9004d;
+	bottom: 35px;
+	font-size: 14px; 
+}
+
+
+@media (max-width:400px){
+    html{
+        font-size: 65%;
+    }
+
+    body{
+        align-content: center;   
+        margin-left: 25px;
+    }
+	.logo{
+		font-size: 18px;
+		letter-spacing: 8px;
+	}
+	#tform{
+		text-align: center;
+		padding: 5px 0px;
+		font-size: 200;
+	}
+	.btn{
+		padding: .5px;
+		margin-left: 0px;
+		font-size: 100%;   
+	}
+
+	.btn:hover{
+		transform: scale(1.2);
+	}
+	.col2-padding{
+		padding:10vh 0px 45px 20px ;
+	}
+	.col2-writing{
+		padding-left: 20px;
+		line-height: 4vh;
+		
+	}
+	
+}
