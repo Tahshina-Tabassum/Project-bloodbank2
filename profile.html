@@ -30,7 +30,10 @@
 
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="index.html"><button class="btn">Log Out</button></a></li>
+                <li><form action="POST">
+                    <button class="btn-n">Log Out</button>
+                    </form>
+                    </li>
             </ul>
             
         </nav>
@@ -111,13 +114,13 @@
                         <h1 class="m-3">blood donation information</h1>
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-md-3"> 
-                                    <a href="update.php" class="btn">update your information</a>
+                                <div class="col-md-3">
+                                     <a href="update.php">
+                                         <button class="btn">Update your information</button></a>
                                     <h4>last time of donation </h4>
                                 </div>
                                 <div class="col-md-9 text-secondary">
                                 <?php echo $_SESSION["last_donate"]?>
-                               
                                 </div>
                             </div>
                         </div>
