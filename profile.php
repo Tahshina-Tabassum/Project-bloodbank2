@@ -33,7 +33,13 @@ session_start();
 
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="index.html"><button class="btn">Log Out</button></a></li>
+                <li><form method="post">
+                   <!-- <button class="btn-n" name="logout" id="logout">Log Out</button>--->
+                    <input type="submit" name="logout" id="logout"
+                class="btn-n" value="Log Out" />
+                    </form>
+                
+                    </li>
             </ul>
             
         </nav>
@@ -115,6 +121,8 @@ session_start();
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-3">
+                                     <a href="update.php">
+                                         <button class="btn">Update your information</button></a>
                                     <h4>last time of donation </h4>
                                 </div>
                                 <div class="col-md-9 text-secondary">
@@ -127,6 +135,24 @@ session_start();
             </div>
         </div>
     </div>
+   
     
 </body>
 </html>
+<?php
+if($_SERVER["REQUEST_METHOD"] == "POST")
+{
+$server="bloodios.com";
+$username="bloodios";
+$password="SXd).4hbT9kJ16";  
+$database="bloodios_bloodios";  
+$con = mysqli_connect($server,$username,$password,$database);
+if(!$con)echo $con->error();
+ //echo '<script> alert("Username ok ");</script>';
+session_destroy();
+ //echo '<script> alert("Username ok ");</script>';
+    echo '<script>localStorage.clear();</script>';
+     echo '<script> location.href= "user.php";</script>';
+   
+}
+?>
