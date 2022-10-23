@@ -87,14 +87,14 @@ session_start();
                                 <div class="col-md-9 text-secondary">
                                     <select name="blood_group" placeholder="none">
         <option value="<?php echo $_SESSION["blood_group"];?>"> <?php echo $_SESSION["blood_group"];?></option>
-        <option value="A+">A+</option>
-        <option value="A-">A-</option>
-        <option value="B+">B+</option>
-        <option value="B-">B-</option>
-        <option value="O+">O+</option>
-        <option value="O-">O-</option>
-        <option value="AB+">AB+</option>
-        <option value="AB-">AB-</option>
+       <?php if($_SESSION["blood_group"]!="A+"){?> <option value="A+">A+</option><?php }?>
+        <?php if($_SESSION["blood_group"]!="A-"){?> <option value="A-">A-</option><?php }?>
+       <?php if($_SESSION["blood_group"]!="B+"){?> <option value="B+">B+</option><?php }?>
+        <?php if($_SESSION["blood_group"]!="B-"){?> <option value="B-">B-</option><?php }?>
+        <?php if($_SESSION["blood_group"]!="O+"){?> <option value="O+">O+</option><?php }?>
+        <?php if($_SESSION["blood_group"]!="O-"){?> <option value="O-">O-</option><?php }?>
+        <?php if($_SESSION["blood_group"]!="AB+"){?> <option value="AB+">AB+</option><?php }?>
+        <?php if($_SESSION["blood_group"]!="AB-"){?> <option value="AB-">AB-</option><?php }?>
                         </select>
                                
 </div>
@@ -127,6 +127,7 @@ session_start();
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-3">
+                                    <button class="up">update</button>
                                     <h4>last time of donation </h4>
                                 </div>
                                 <div class="col-md-9 text-secondary">
@@ -137,7 +138,7 @@ session_start();
                     </div>
                 </div>
             </div>
-            <button>update</button>
+            
 </form>
         </div>
     </div>
