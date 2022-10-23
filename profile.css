@@ -121,6 +121,24 @@ a:hover{
     text-decoration: none;
    
 }
+.btn-n1{
+    color:white;
+    padding: 15px;
+    align-items: center;
+    background-color: #98473E;
+    text-decoration: none;
+    margin-left: 50px;
+   
+}
+.btn-n2{
+    color: white;
+    padding: 15px;
+    align-items: center;
+    background-color: #98473E;
+    text-decoration: none;
+    margin-left: 900px;
+   
+}
 
 @media (max-width:1000px){
     html{
@@ -148,7 +166,7 @@ a:hover{
         padding-right: 8%;;
     }
 
-    @media (max-width:400px){
+    @media (max-width:420px){
         html{
             font-size: 75%;
         }
@@ -179,4 +197,4 @@ a:hover{
             padding-left: 8%;
             padding-right: 8%;;
         }
-}
+    }
