@@ -1,0 +1,151 @@
+body{
+    background-color:black;
+   align-content: center;
+}
+.form{
+    text-align: center;
+    border-radius: 50px;
+    font:20px;
+    border-width:2px;
+    height: 40px;
+    width: 700px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color:white;
+    border-color: brown;
+}
+.form_box h3{
+ text-align: center;
+ color:crimson;
+}
+.blood{
+    color: aliceblue;
+    text-align: center;
+    width: 30%;
+    background-color:crimson;
+    justify-content: center;
+}
+.bl{
+    border-radius: 50px;
+    font:20px;
+    height: 40px;
+    width: 700px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+   
+.btn{
+
+    border-radius: 50px;
+    font:20px;
+    border-width:2px;
+    height: 40px;
+    width: 700px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-color: brown;
+    background-color:white;
+   
+}
+.btn:hover{
+    transition: 0.4s;
+   
+}
+.card-body{
+    color: aliceblue;
+    justify-content: center;
+    display: flex;
+   
+}
+.img{
+    height:200;
+    width:200;
+}
+
+.col-md-4 img{
+    margin-top: 100px;
+    margin-right: 30px;
+    justify-content:center;
+    display: flex;
+   
+}  
+
+.col-md-8{
+    width: 350px;
+        height: 275px;
+        padding: 30px 15px;
+        background: #A63446;
+        box-shadow: 0.2em 0.2em 1.2em #A63446,
+                    -0.5em -0.5em 1em #7B0D1E;
+        border-radius:20px;
+        border-color: black; 
+
+}
+.container{
+    align-items: center;
+    margin-bottom:50px;
+    
+   
+}
+.row{
+    align-items: center;
+}
+@media (max-width:1000px){
+
+    html{
+        font-size: 100%;
+    }
+    .form{
+        height: 40px;
+        width: 150px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .bl{
+        margin-top: 0px;
+        margin-bottom: 0px;
+        height: 40px;
+        width: 150px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    
+    }
+       
+    .btn{
+        height: 40px;
+        width: 150px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+       
+    }
+}
+@media (max-width:420px){
+
+    html{
+        font-size: 80%;
+    }
+    .form{
+        height: 40px;
+        width: 150px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .bl{
+        margin-top: 0px;
+        margin-bottom: 0px;
+        height: 40px;
+        width: 150px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    
+    }
+       
+    .btn{
+        height: 40px;
+        width: 150px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+       
+    }
+}

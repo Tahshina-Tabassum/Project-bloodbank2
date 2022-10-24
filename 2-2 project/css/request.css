@@ -1,0 +1,151 @@
+body{
+    margin-top: 20px;
+    background-color: antiquewhite;
+
+}
+.main{
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.topbar{
+    background-color:;
+    overflow: hidden;
+    margin-bottom: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+
+}
+.topbar a{
+    float: right;
+    color: azure;
+    
+    text-align: center;
+    padding: 20px 26px;
+    text-decoration: none;
+    font-size: 26px;
+
+}
+.topbar a:hover{
+    color:#3d1308;
+background: transparent;
+}
+nav{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 0px;
+    margin-left: 6.85%;
+    margin-right: 6.85%;
+	padding-left: 8%;
+	padding-right: 8%;
+    background: black;
+}
+.logo{
+	color: white;
+	font-size: 35px;
+	letter-spacing: 4px;
+	cursor: pointer;
+}
+span{
+	color: #f9004d;
+}
+nav ul li{
+	list-style-type: none;
+	display: inline-block;
+	padding: 10px  25px;
+}
+nav ul li a{
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+nav ul li a:hover{
+    text-decoration: none;
+	color: #f9004d;
+	transition: .4s;
+    
+}
+.request{
+    color: White;
+    background-color:#A63446;
+    text-align: center;
+
+    padding-top: 20px;
+    font-size: 30px;
+    margin-left: 6.85%;
+    margin-right: 6.85%;
+    margin-bottom: 30px;
+}
+ .request h4{
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    
+}
+.card-body{
+    color: aliceblue;
+    justify-content: center;
+    display: flex;
+   
+}
+.img{
+    height:200;
+    width:200;
+}
+
+.col-md-4 img{
+    margin-right: 300px;
+    justify-content:30px;
+    display: flex;
+      
+}
+
+.col-md-8{
+    width: 350px;
+        height: 275px;
+        padding: 30px 15px;
+        background: #A63446;
+        box-shadow: 0.2em 0.2em 1.2em #A63446,
+                    -0.5em -0.5em 1em #7B0D1E;
+        border-radius:20px;
+        border-color: black; 
+
+}
+.container{
+    align-items: center;
+    margin-bottom:50px;
+    
+   
+}
+.row{
+    align-items: center;
+}
+
+@media (max-width:420px){
+    html{
+        font-size: 75%;
+    }
+    .btn{
+        padding: .5px;
+        margin-left: 0px;
+        font-size: 90%;   
+    }
+    .row{
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    .logo{
+        font-size: 11px;
+        letter-spacing: 8px;
+    }
+    .col-md-4 img{
+        margin-right: 10px;
+    }
+    .col-md-8{
+       margin-top: 20px;
+       margin-right:10px;
+        width: 250px;
+         height: 200px;
+    }
+}
