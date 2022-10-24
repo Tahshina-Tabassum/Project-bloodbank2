@@ -44,14 +44,15 @@ session_start();
             <div class="col-md-4">
                 <div class="card text-center sidebar">
                     <img src="<?php echo $_SESSION["image"];?>" class="rounded-circle" >
+                    <!-- <img src="mypic2.jpg" class="rounded-circle" > -->
                     <div class="button_req">
-                        <button class="btn-n1">Request for blood</button>
-                        <button class="btn-n2">See available doner</button>
+                       <a href="patientdetails.php"> <button class="btn-n1">Request for blood</button></a>
+                        <a href="doner_search.php"><button class="btn-n2">See available doner</button></a>
 
                     </div>
                     <div class="mt-3">
                         <h3> <?php echo $_SESSION["name"]?></h3>
-                        <h4 class="search-text"><a href="donar_search.php">🔎Click for search</a></h4>
+                        
                         
                     </div>
                 </div>
@@ -141,7 +142,7 @@ session_start();
     
 </body>
 </html>
-<!-- <?php
+ <!-- <?php
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 $server="bloodios.com";
 $username="bloodios";
