@@ -127,7 +127,9 @@ a:hover{
     align-items: center;
     background-color: #98473E;
     text-decoration: none;
-    margin-left: 50px;
+    margin-right: 950px;
+    margin: top 50px;
+    
    
 }
 .btn-n2{
@@ -136,8 +138,14 @@ a:hover{
     align-items: center;
     background-color: #98473E;
     text-decoration: none;
-    margin-left: 900px;
+    margin-left: 950px;
+    margin-top: -200px
+
    
+   
+}
+.button_req{
+    display:;
 }
 
 @media (max-width:1000px){
@@ -196,5 +204,30 @@ a:hover{
             margin-right: 3%;
             padding-left: 8%;
             padding-right: 8%;;
+        }
+        .btn-n1{
+            color:white;
+            padding: 10px;
+            align-items: center;
+            background-color: #98473E;
+            text-decoration: none;
+            margin-left:5px;
+            font-size: 8px;
+
+            margin-top: 60px;
+           
+        }
+        .btn-n2{
+            color: white;
+            padding: 10px;
+            align-items: center;
+            background-color: #98473E;
+            text-decoration: none;
+            margin-left: 175px;
+            font-size: 8px;
+                    
+        }
+        .button_req{
+            display: inline-block;
         }
     }
