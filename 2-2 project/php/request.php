@@ -21,7 +21,7 @@ session_start();
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li>
-                    <button class="btn-n">Log Out</button>
+                    <a href="adminlogin.php"><button class="btn">Log Out</button></a>
                     
                     </li>
             </ul>
@@ -41,7 +41,9 @@ $database="bloodios_bloodios";
 $con = mysqli_connect($server,$username,$password,$database);
 
 //echo '<script> alert("NO BLOOD REQUEST");</script>';
-    $sql="SELECT * FROM `blood_requests`;";
+   $blood_groupp=$_SESSION["blood_group"];
+   $username=$_SESSION["username"];
+    $sql="SELECT * FROM `blood_requests` WHERE total_donor_need>0 and blood_group='$blood_groupp' and username!='$username';";
    // echo '<script> alert("NO BLOOD REQUEST");</script>';
     $res=mysqli_query($con,$sql);
     //echo '<script> alert("NO BLOOD REQUEST");</script>';
@@ -61,15 +63,17 @@ $con = mysqli_connect($server,$username,$password,$database);
         {
             
          $username=$rows['username'];
+         $request_id=$rows['request_id'];
          $blood_group=$rows['blood_group'];
          $hospital=$rows['hospital_name'];
          $date=$rows['recieve_date'];
          $time=$rows['recieve_time'];
-        $sql2="SELECT * FROM `donar` WHERE username='$username'";
-       $res2=mysqli_query($con,$sql2);
-        $rows2=mysqli_fetch_assoc($res2);
-        $name=$rows2['name'];
-        $email=$rows2['email'];
+         $donor_num=$rows['total_donor_need'];
+         $sql2="SELECT * FROM `donar` WHERE username='$username'";
+         $res2=mysqli_query($con,$sql2);
+         $rows2=mysqli_fetch_assoc($res2);
+         $name=$rows2['name'];
+         $email=$rows2['email'];
          $phone_number=$rows2['phone_number'];
          $image=$rows2['image'];
           //echo '<script> alert("HI");</script>';
@@ -101,7 +105,6 @@ $con = mysqli_connect($server,$username,$password,$database);
                              
                              <form method="POST">
                              <td><input type="submit" value="Accept" name="accept" class="btn"></td>
-                             <td><input type="submit" value="Cancel" name="cancel" class="btn"></td>
                              </form>
                            
                                     
@@ -114,7 +117,7 @@ $con = mysqli_connect($server,$username,$password,$database);
 <?php
 
 
-if(isset($_POST['accept'])) 
+/*if(isset($_POST['accept'])) 
 {
  
     
@@ -135,7 +138,7 @@ if(isset($_POST['cancel']) )
 {
  //   header('location: profile.php');
    // echo "hi";
-    echo '<script> alert("Sucessfully Requested");</script>';
+    echo '<script> alert("Cancelled");</script>';
     
     $sql2="DELETE FROM `blood_requests` WHERE username='$username';";
     $res=mysqli_query($con,$sql2);
@@ -147,10 +150,29 @@ if(isset($_POST['cancel']) )
    
         
     }
-}
+}*/
   
         }
     }
+    if(isset($_POST['accept'])) 
+{
+  $d_username=$_SESSION["username"];
+    $sql="INSERT INTO `Acceptance`(`request_id`, `blood_group`, `donor_username`, `patient_username`) VALUES ('$request_id','$blood_group','$d_username','$username')";
+    $res=mysqli_query($con,$sql);
+    echo $con->error;
+    if($res){
+        $donor_num=$donor_num-1;
+        $sql="UPDATE `blood_requests` SET total_donor_need='$donor_num'";
+    $res=mysqli_query($con,$sql);
+   echo '<script> alert("Accepted");</script>';
+   
+   echo '<script> location.href= "request.php";</script>';
+
+   
+        
+    }
+}
+
 
 
 ?>
