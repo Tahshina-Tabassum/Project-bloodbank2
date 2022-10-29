@@ -22,7 +22,7 @@
   
     <nav>
         <!-- logo -->
-        <h2 class="logo"><img width="100px" height="110px" src="../project/blood/img/RokterEmoji_2.png">Blood<span>iOS</span></h2>
+        <h2 class="logo"><img width="100px" height="110px" src="../project/blood/image/RokterEmoji_2.png">Blood<span>iOS</span></h2>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="#about">About</a></li>
